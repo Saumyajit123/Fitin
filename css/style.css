@@ -1,0 +1,969 @@
+@font-face {
+  font-family: "Akira";
+  src: url("../assets/fonts/Akira-Expanded-Font/Akira\ Expanded\ Demo.otf");
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("../assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: #fff;
+  --primary-color: #f2ff00;
+  --tertiary-color: #000;
+  --card-bg: #1e1e1e;
+  --hover-color: #6a6a6a;
+  --text-color-10: #ffffff1a;
+  --text-color-16: #ffffff29;
+  --text-color-50: #ffffff80;
+  --text-color-30: #ffffff4d;
+}
+
+body,
+html {
+  overflow-x: hidden;
+  font-family: "Clash Display", sans-serif;
+  background-color: var(--tertiary-color);
+}
+
+.container {
+  max-width: 1820px;
+}
+
+a,
+span {
+  display: inline-block;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.title1 {
+  font-family: "Akira", sans-serif;
+  font-size: 141px;
+  color: var(--text-color);
+  line-height: 130px;
+}
+
+.title3 {
+  font-family: "Akira", sans-serif;
+  font-size: 25px;
+  color: var(--text-color);
+}
+
+/* 
+=================
+HEADER SECTION
+=================
+*/
+
+.hdr-sec {
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  z-index: 99;
+}
+
+.navbar-brand {
+  width: 172px;
+}
+
+.navbar-brand > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.offcanvas {
+  flex-direction: row !important;
+  align-items: center;
+}
+
+.navbar-nav {
+  max-width: 1305px;
+  padding: 3px;
+  backdrop-filter: blur(13px);
+  margin: 0 auto;
+  /* height: 74px; */
+  align-items: center;
+  border-radius: 56px;
+  background-color: var(--text-color-16) !important;
+  border: 1px solid #ffffff42;
+}
+
+.navbar-nav li:nth-child(6) {
+  margin-right: 0;
+}
+
+.nav-item {
+  margin-right: 5px;
+}
+
+.nav-link {
+  padding: 21px 20px !important;
+  color: var(--text-color);
+  font-size: 18px;
+  transition: all 0.5s ease-in;
+}
+
+.nav-link:hover {
+  color: var(--text-color);
+  border-radius: 110px;
+  background-color: var(--tertiary-color);
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-menu {
+  background: linear-gradient(
+      to top,
+      rgba(255, 251, 0, 0.2) 50%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    #000000 !important;
+  padding: 5px 19px 0 5px;
+  border-radius: 10px;
+}
+
+.dropdown-menu > li {
+  margin-bottom: 5px;
+}
+
+.dropdown-item {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0%, #4e4e4e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 10px 20px;
+  border: 1px solid #ffe6004d;
+  width: 220px !important;
+  border-radius: 300px;
+}
+
+.navbar-nav .nav-link.show {
+  color: var(--text-color) !important;
+}
+
+.search-form {
+  max-width: 370px;
+}
+
+.search-wrpr {
+  width: 100%;
+  padding: 15px 15px;
+  border-radius: 74px;
+  background-color: var(--tertiary-color);
+}
+
+.search-wrpr > label > img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.search-input {
+  background: none;
+  border: none;
+}
+
+.search-input::placeholder {
+  color: var(--text-color) !important;
+  font-size: 16px;
+}
+
+.search-input:focus {
+  background: none;
+  outline: none !important;
+  border: none !important;
+}
+
+.cart-bg {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+}
+
+.cart-bg > img {
+  width: 24px;
+  height: 24px;
+}
+
+.nav-btn > img {
+  width: 37px;
+  height: 37px;
+  object-fit: contain;
+  margin-left: 10px;
+}
+
+.nav-btn {
+  padding: 20px 20px 20px 41px;
+  border: 1px solid var(--primary-color);
+  background-color: #fff7001a;
+  backdrop-filter: blur(2px);
+  border-radius: 37.5px;
+  transition: all 0.2s;
+  overflow: hidden;
+}
+
+.nav-btn > span {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--primary-color);
+  text-transform: capitalize;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-btn img {
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-btn:hover {
+  background-color: var(--primary-color);
+}
+
+.nav-btn:hover span {
+  transform: translateX(16em);
+}
+
+.nav-btn:hover img {
+  transform: translateX(-6em) scale(1.8);
+}
+
+.active {
+  border-radius: 110px;
+  background-color: var(--primary-color);
+  color: var(--tertiary-color) !important;
+}
+
+.active:hover {
+  background: var(--primary-color) !important;
+}
+
+/* 
+==================
+BANNER SECTION
+==================
+*/
+
+.banner-sec {
+  padding: 400px 0 122px;
+  min-height: 100vh;
+  background: url("../assets/Banner-bg.jpg") no-repeat center/cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.banner-sec::before {
+  content: "";
+  z-index: 2;
+  filter: blur(872px);
+  background: #f7e700;
+  width: 627px;
+  height: 627px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.banner-sec::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+}
+
+.banner-left {
+  max-width: 550px;
+  margin-right: auto;
+}
+
+.left-cntn-text {
+  font-size: 27px;
+  font-weight: 500;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 40%,
+    rgba(255, 255, 255, 0.5) 70%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.member-img {
+  margin-block: 40px;
+}
+
+.member-circle {
+  width: 98px;
+  height: 98px;
+  animation: wave 1.5s ease-in-out infinite;
+}
+
+.member-circle > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+  }
+
+  20% {
+    transform: translateY(-10px);
+  }
+
+  40% {
+    transform: translateY(0);
+  }
+}
+
+.member-img li:nth-child(1) {
+  animation-delay: 0.01s;
+}
+
+.member-img li:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.member-img li:nth-child(3) {
+  animation-delay: 0.19s;
+}
+
+.member-img li:nth-child(4) {
+  animation-delay: 0.28s;
+}
+
+.member-img li:nth-child(2) img {
+  transform: translateX(-26px);
+}
+
+.member-img li:nth-child(3) img {
+  transform: translateX(-52px);
+}
+
+.member-img li:nth-child(4) img {
+  transform: translateX(-78px);
+}
+
+.member-text {
+  max-width: 300px;
+  font-size: 27px;
+  font-weight: 500;
+  color: var(--text-color-50);
+}
+
+.member-text > span {
+  color: var(--primary-color);
+}
+
+.scroll {
+  margin-top: 40px;
+  font-size: 27px;
+  font-weight: 500;
+  padding-left: 16.5px;
+  color: var(--text-color);
+  border-left: 1px solid var(--text-color);
+}
+
+.banner-right {
+  max-width: 1170px;
+  margin-left: auto;
+  position: relative;
+}
+
+.title1 > span {
+  color: var(--primary-color);
+}
+
+.yellow-line {
+  transform: skewX(-30deg);
+  width: 24.78px;
+  height: 59.08px;
+  background: var(--primary-color);
+  position: relative;
+}
+
+.yellow-line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 24.78px;
+  height: 59.08px;
+  background: var(--primary-color);
+}
+
+.yellow-line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 24.78px;
+  height: 59.08px;
+  background: var(--primary-color);
+}
+
+.banner-btn {
+  max-width: 317px;
+  color: var(--text-color);
+  font-size: 33px;
+  border-bottom: 1px solid var(--text-color);
+  padding: 0 !important;
+  margin-top: 100px;
+}
+
+.banner-btn:hover {
+  color: var(--primary-color) !important;
+  border-bottom: 1px solid var(--primary-color) !important;
+}
+
+.up-arrow {
+  width: 24px;
+  height: 27px;
+  object-fit: cover;
+}
+
+/* 
+====================
+TRAINING SECTION
+====================
+*/
+
+.category-sec {
+  padding: 20px 0;
+  position: relative;
+  background-color: var(--tertiary-color);
+}
+
+.swiper {
+  width: 100%;
+  overflow: visible;
+}
+
+.myswiper {
+  overflow: hidden;
+}
+
+.swiper-slide {
+  max-width: 640px;
+  height: 380.1px;
+  background-color: var(--tertiary-color);
+  padding: 24px;
+  border: 1px solid var(--text-color-30);
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.card {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 50px 0 50px 50px;
+  position: relative !important;
+}
+
+.card1 {
+  background: url("../assets/trainbg-1.png") no-repeat center/cover;
+}
+
+.card2 {
+  background: url("../assets/trainbg-2.png") no-repeat center/cover;
+}
+
+.card3 {
+  background: url("../assets/trainbg-3.png") no-repeat center/cover;
+}
+
+.smaller-yellow-line {
+  margin-left: 30px !important;
+}
+
+.smaller-yellow-line,
+.smaller-yellow-line::after,
+.smaller-yellow-line::before {
+  width: 11.55px;
+  height: 27.55px;
+}
+
+.smaller-yellow-line::before {
+  left: -22px;
+}
+
+.smaller-yellow-line::after {
+  left: 22px;
+}
+
+.card p {
+  font-family: "Akira";
+  font-size: 139px;
+  color: var(--card-bg);
+  -webkit-text-stroke: 1px var(--text-color-50);
+  margin: 0 !important;
+}
+
+.train-img1 {
+  max-width: 196.06px;
+  position: absolute;
+  right: 19.94px;
+  bottom: 0;
+}
+
+.train-img1 > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.train-img2 {
+  max-width: 201.47px;
+  position: absolute;
+  right: 38.53px;
+  bottom: 0.1px;
+}
+
+.train-img2 > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.train-img3 {
+  max-width: 485.44px;
+  position: absolute;
+  right: 14.5px;
+  bottom: 0.1px;
+}
+
+.train-img3 > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* 
+==================
+MEDIA QUERIES
+==================
+*/
+
+@media screen and (max-width: 1750px) {
+  .title1 {
+    color: var(--text-color);
+    font-size: 100px;
+    line-height: 100px;
+  }
+
+  .title3 {
+    font-size: 20px;
+    color: var(--text-color);
+  }
+
+  /* Header Section */
+  .nav-btn {
+    padding: 20px 10px 20px 17px;
+    outline: 1px solid var(--primary-color);
+    background-color: #fff7001a;
+    backdrop-filter: blur(2px);
+    border-radius: 37.5px;
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .navbar-brand {
+    width: 150px;
+  }
+
+  .nav-link {
+    padding: 14px 14px !important;
+    color: var(--text-color);
+    font-size: 16px;
+  }
+
+  .nav-btn > img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    margin-left: 0px;
+  }
+
+  /* Banner Section */
+  .banner-sec {
+    padding-bottom: 60px;
+  }
+
+  .banner-btn {
+    max-width: 252px;
+    font-size: 25px;
+    margin-top: 60px;
+  }
+
+  .member-circle {
+    margin-block: 30px;
+  }
+
+  .member-text {
+    max-width: 300px;
+    font-size: 20px;
+  }
+
+  .yellow-line {
+    margin-left: 30px;
+  }
+
+  /* Training Section */
+  .train-img1 {
+    width: 181.06px;
+    position: absolute;
+    right: -23.06px;
+    bottom: 0.1px;
+  }
+  .train-img2 {
+    width: 184.47px;
+    position: absolute;
+    right: -27.47px;
+    bottom: 0.1px;
+  }
+  .train-img3 {
+    width: 380.44px;
+    position: absolute;
+    right: -31.5px;
+    bottom: 0.1px;
+  }
+
+  .card p {
+    font-family: "Akira";
+    font-size: 114px;
+    color: var(--card-bg);
+    -webkit-text-stroke: 1px var(--text-color-50);
+    margin: 0 !important;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .title1 {
+    font-size: 87px;
+    line-height: 83px;
+  }
+
+  /* Header Section */
+
+  .nav-btn {
+    margin-top: 14px;
+  }
+
+  .offcanvas {
+    flex-direction: column !important;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4); /* semi-transparent black */
+    backdrop-filter: blur(20px); /* blur intensity for glass effect */
+    -webkit-backdrop-filter: blur(20px); /* for Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* optional: subtle glass border */
+  }
+
+  .navbar-nav {
+    background: none !important;
+    border: none;
+    backdrop-filter: none;
+  }
+
+  .navbar-toggler-icon {
+    width: 2.2rem;
+    background: none;
+  }
+
+  .nav-item {
+    margin-right: 0;
+  }
+
+  .nav-item:hover {
+    background: none;
+  }
+
+  .search-form {
+    margin-bottom: 20px;
+  }
+
+  .search-wrpr {
+    background-color: var(--hover-color);
+    padding: 6px 10px;
+  }
+
+  /* Banner Section */
+  .left-cntn-text {
+    font-size: 22px;
+  }
+
+  .member-text {
+    max-width: 300px;
+    font-size: 18px;
+  }
+
+  .scroll {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: 500;
+    padding-left: 16.5px;
+    color: var(--text-color);
+    border-left: 1px solid var(--text-color);
+  }
+
+  .member-img {
+    margin-block: 25px;
+  }
+
+  .member-circle {
+    width: 76px;
+    height: 76px;
+  }
+
+  .banner-btn {
+    max-width: 252px;
+    font-size: 21px;
+    margin-top: 38px;
+  }
+
+  /* Training Section */
+  .card {
+    padding: 42px 0 36px 21px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .title1 {
+    font-size: 70px;
+    line-height: 70px;
+  }
+
+  .title3 {
+    font-size: 16px;
+  }
+
+  /* Banner Section */
+  .left-cntn-text {
+    font-size: 18px;
+  }
+
+  .yellow-line {
+    margin-left: 40px;
+  }
+
+  /* Training Section */
+  .card {
+    padding: 30px 0 27px 21px;
+  }
+  .smaller-yellow-line {
+    margin-left: 50px !important;
+  }
+  .card p {
+    font-size: 90px;
+  }
+  .train-img3 {
+    width: 323.44px;
+    right: -32.5px;
+    bottom: 0.1px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .title1 {
+    font-size: 62px;
+    line-height: 70px;
+  }
+
+  /* Header Section */
+  .nav-link {
+    padding: 13px 13px !important;
+  }
+
+  /* Banner Section */
+  .banner-sec::before {
+    width: 413px;
+    height: 542px;
+  }
+
+  .banner-row {
+    flex-wrap: wrap-reverse;
+  }
+
+  .banner-right {
+    max-width: 100%;
+  }
+
+  .yellow-line {
+    width: 18.78px;
+    height: 51.08px;
+  }
+
+  .yellow-line::before {
+    left: -34px;
+    width: 18.78px;
+    height: 51.08px;
+  }
+
+  .yellow-line::after {
+    left: 34px;
+    width: 18.78px;
+    height: 51.08px;
+  }
+
+  .banner-left {
+    max-width: 100%;
+    margin: 70px 0 0;
+  }
+
+  .member-text {
+    max-width: 100%;
+  }
+
+  /* Training Section */
+  .slide {
+    height: 271.1px;
+  }
+  .train-img1 {
+    width: 128.06px;
+
+    right: -23.06px;
+    bottom: 0.1px;
+  }
+  .train-img2 {
+    width: 128.47px;
+
+    right: -27.47px;
+    bottom: 0.1px;
+  }
+  .train-img3 {
+    width: 318.44px;
+    right: -32.5px;
+    bottom: 0.1px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .title3 {
+    font-size: 14px;
+  }
+  /* Banner Section */
+  .banner-sec::before {
+    width: 370px;
+    height: 514px;
+  }
+
+  /* Training Section */
+  .slide {
+    height: 268.1px;
+  }
+
+  .card p {
+    font-size: 77px;
+  }
+
+  .train-img1 {
+    width: 127.06px;
+  }
+
+  .train-img3 {
+    width: 267.44px;
+    right: -32.5px;
+    bottom: 0.1px;
+  }
+
+  .train-img2 {
+    width: 128.47px;
+    position: absolute;
+    right: -28.47px;
+    bottom: 0.1px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .title1 {
+    font-size: 35px;
+    line-height: 36px;
+  }
+
+  .title3 {
+    font-size: 14px;
+    margin-left: 8px;
+  }
+
+  /* Header Section */
+  .navbar-brand {
+    width: 130px;
+  }
+
+  /* Banner Section */
+  .banner-sec {
+    padding: 300px 0 40px;
+  }
+
+  .banner-sec::before {
+    width: 279px;
+    height: 433px;
+  }
+
+  .yellow-line {
+    margin-left: 25px;
+  }
+
+  .yellow-line {
+    width: 12.78px;
+    height: 33.08px;
+  }
+
+  .yellow-line::before {
+    left: -24px;
+    width: 12.78px;
+    height: 33.08px;
+  }
+
+  .yellow-line::after {
+    left: 24px;
+    width: 12.78px;
+    height: 33.08px;
+  }
+
+  .banner-left-cntn {
+    margin: 50px 0 0;
+  }
+
+  /* Training Section */
+  .slide {
+    height: 252.1px;
+  }
+  .smaller-yellow-line {
+    margin-left: 31px !important;
+  }
+  .train-img2 {
+    width: 130.47px;
+    right: -17.47px;
+    bottom: 0.1px;
+  }
+  .train-img1 {
+    right: -11.06px;
+    bottom: 0.1px;
+  }
+}
