@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
 @font-face {
   font-family: "Akira";
   src: url("../assets/fonts/Akira-Expanded-Font/Akira\ Expanded\ Demo.otf");
@@ -54,9 +56,22 @@ ul {
   line-height: 130px;
 }
 
+.title2 {
+  font-family: "Clash Display";
+  font-size: 48px;
+  font-weight: 400;
+}
+
 .title3 {
   font-family: "Akira", sans-serif;
   font-size: 25px;
+  color: var(--text-color);
+}
+
+.title4 {
+  font-family: "Akira", sans-serif;
+  font-size: 19px;
+  font-weight: 900;
   color: var(--text-color);
 }
 
@@ -563,6 +578,776 @@ TRAINING SECTION
 }
 
 /* 
+========================
+ABOUT GYM SECTION
+========================
+*/
+
+.aboutgym-sec {
+  padding: 160px 0 60px;
+  background-color: var(--tertiary-color);
+}
+
+.about-left-hdr .title3 {
+  font-family: "Akira";
+  font-size: 27px;
+  font-weight: 800;
+  margin-left: 50px;
+}
+
+.about-left-hdr .title3::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  top: 2%;
+  left: -40px;
+  border-radius: 50%;
+  background-color: var(--tertiary-color);
+  border: 5px solid var(--primary-color);
+}
+
+.about-yellow-line {
+  top: 7px;
+  left: 9px;
+}
+
+.about-yellow-line,
+.about-yellow-line::after,
+.about-yellow-line::before {
+  width: 8.55px;
+  height: 22px;
+}
+
+.about-yellow-line::before {
+  left: -15px;
+}
+
+.about-yellow-line::after {
+  left: 15px;
+}
+
+.about-img {
+  max-width: 825px;
+  margin-top: 166.73px;
+}
+
+.about-img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-right-hdr .title2 {
+  font-family: "Clash Display";
+  font-size: 48px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-right-cntn {
+  max-width: 825px;
+  margin: 80px auto 0;
+}
+
+.about-right-cntn p {
+  font-size: 35px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.about-desc-row {
+  margin-top: 30px;
+}
+
+.desc {
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--text-color-50);
+}
+
+.call-img {
+  max-width: 99.28px;
+}
+
+.call-img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact > a {
+  margin-left: 31px;
+  max-width: 261px;
+  font-family: "Clash Display";
+  font-size: 23px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.contact > a > span {
+  font-size: 31px;
+  color: var(--primary-color);
+}
+
+/* 
+=====================
+SERVICE SECTION
+=====================
+*/
+
+.service-sec {
+  padding: 80px 0;
+  background: var(--tertiary-color);
+}
+
+.service-title3::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  top: 2%;
+  left: -40px;
+  border-radius: 50%;
+  background-color: var(--tertiary-color);
+  border: 5px solid var(--primary-color);
+}
+
+.service-hdr .title3 {
+  margin-left: 50px;
+  font-size: 27px;
+  font-weight: 800;
+}
+
+.service-cntn {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.training-list {
+  width: 100%;
+}
+
+.training-list a {
+  font-size: 45px;
+  font-weight: 900;
+  font-family: "Akira";
+  padding: 65.55px 5px;
+  color: var(--hover-color);
+  border-bottom: 1px solid var(--text-color-30);
+  position: relative;
+  transition: all 0.3s linear;
+}
+
+.training-list > li:hover > a {
+  color: var(--text-color);
+}
+
+.training-list > li:hover i {
+  transform: rotate(-45deg) translateY(-2px);
+}
+
+/* 
+===================
+ABOUT SECTION
+===================
+*/
+
+.about-sec {
+  padding: 80px 0;
+  background: url("../assets/about-bg-pic.png") no-repeat center/cover;
+  background-attachment: fixed;
+  background-color: var(--tertiary-color);
+}
+
+.about-hdr .title3::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  top: -8%;
+  left: -40px;
+  border-radius: 50%;
+  background-color: var(--tertiary-color);
+  border: 5px solid var(--primary-color);
+}
+
+.about-hdr .title3 {
+  margin-left: 50px;
+}
+
+.about-img {
+  max-width: 848px;
+  margin-top: 169px;
+}
+
+.about-img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 65%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 65%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.about-sec .title2 {
+  font-family: "Clash Display";
+  font-size: 48px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-container {
+  margin-top: 80px;
+}
+
+.about-card {
+  background-color: var(--text-color-10);
+  border: 1px solid;
+  max-width: 412px;
+  height: 289px;
+  backdrop-filter: blur(60px);
+  padding: 30px;
+  margin-bottom: 24px;
+}
+
+.about-card i {
+  color: var(--primary-color);
+  margin-bottom: 22px;
+}
+
+.about-card > p {
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--text-color);
+  margin-top: 22px;
+  opacity: 0.5;
+}
+
+.about-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  padding: 1px;
+  background: linear-gradient(to right, #f2ff00 0%, rgba(242, 255, 0, 0) 100%),
+    linear-gradient(to left, #f2ff00 0%, rgba(242, 255, 0, 0) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+/* 
+================
+COACH SECTION
+================
+*/
+
+.coach-sec {
+  padding: 80px 0;
+  background-color: var(--tertiary-color);
+}
+
+.coach-left-hdr .title3 {
+  margin-left: 50px;
+}
+
+.coach-left-hdr .title3::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  top: -8%;
+  left: -40px;
+  border-radius: 50%;
+  background-color: var(--tertiary-color);
+  border: 5px solid var(--primary-color);
+}
+
+.coach-swiper {
+  width: 100%;
+  overflow: visible;
+  margin-top: 80px;
+}
+
+.coach-slide {
+  min-height: 500px;
+  border: 1px solid #ffffff33;
+}
+
+.coach-card {
+  min-height: 452px;
+  padding: 317px 24px 24px;
+  position: relative;
+}
+
+.coach1 {
+  background: url("../assets/coach-cardbg-1.png") no-repeat center/cover;
+}
+
+.coach2 {
+  background: url("../assets/coach-cardbg-2.png") no-repeat center/cover;
+}
+
+.coach3 {
+  background: url("../assets/coach-cardbg-3.png") no-repeat center/cover;
+}
+
+.coach-img {
+  max-width: 592px;
+  position: absolute;
+  top: -62px;
+}
+
+.coach-img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.coach-desc > .yellow-line,
+.coach-desc > .yellow-line::after,
+.coach-desc > .yellow-line::before {
+  width: 6.35px;
+  height: 15.17px;
+}
+
+.coach-desc > .yellow-line::before {
+  left: 12px;
+}
+
+.coach-desc > .yellow-line {
+  margin-left: 2px !important;
+  bottom: 21px;
+}
+
+.coach-title {
+  color: var(--text-color);
+  font-weight: 900;
+  font-family: "Akira";
+  position: absolute;
+  bottom: 85px;
+  z-index: 999;
+  margin-bottom: 15px;
+}
+
+.coach-name {
+  font-family: "Clash Display";
+  font-weight: 200;
+  font-size: 53px;
+  color: var(--text-color);
+  position: absolute;
+  z-index: 999;
+}
+
+.swiper-pagination {
+  top: 110% !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--primary-color) !important;
+}
+
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  border-radius: 1px;
+  opacity: 1;
+  background: var(--text-color-30);
+}
+
+/* 
+===============
+PLAN SECTION
+===============
+*/
+
+.plan-sec {
+  padding: 80px 0;
+  background-color: var(--tertiary-color);
+}
+
+.plan-left-hdr .title3 {
+  margin-left: 50px;
+}
+
+.plan-left-hdr .title3::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  top: -8%;
+  left: -40px;
+  border-radius: 50%;
+  background-color: var(--tertiary-color);
+  border: 5px solid var(--primary-color);
+}
+
+.plan-right-hdr .title2 {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.plan-col {
+  padding: 0 !important;
+}
+
+.plan-right-hdr {
+  margin-bottom: 40px;
+}
+
+.plan-parent-box {
+  max-width: 639.67px;
+  height: 639px;
+  padding: 24px;
+  background-color: var(--tertiary-color);
+  border: 1px solid var(--text-color-30);
+  margin: 0 auto;
+}
+
+.plan-card {
+  max-width: 591.67px;
+  height: 585px;
+  position: relative;
+  background: url("../assets/coach-cardbg-1.png") no-repeat center/cover;
+  padding: 24px 16px;
+}
+
+.plan-card .coach-title {
+  top: 37px;
+}
+
+.plan-yellow-line,
+.plan-yellow-line::after,
+.plan-yellow-line::before {
+  width: 6.36px;
+  height: 15.17px;
+}
+
+.plan-yellow-line {
+  margin-left: 16px !important;
+}
+
+.plan-yellow-line::before {
+  left: -11px;
+}
+
+.plan-yellow-line::after {
+  left: 11px;
+}
+
+.plan-title {
+  margin-top: 10px;
+}
+
+.plan-para {
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--text-color);
+  opacity: 0.5;
+  margin-top: 24px;
+}
+
+.price-ben {
+  margin-left: 0;
+  padding-left: 0;
+  margin-block: 70px;
+}
+
+.price-hdr {
+  font-size: 53px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.price-hdr > sup {
+  font-size: 22px;
+  font-weight: 500;
+  top: -1.5em;
+}
+
+.price-ben > li {
+  margin-bottom: 14px;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--text-color);
+}
+
+.price-ben > li > img {
+  margin-right: 10px;
+}
+
+.plan-btn {
+  padding: 20px 90px;
+  width: 100%;
+  color: var(--text-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  border-block: 1px solid var(--text-color-30);
+  border-inline: 4px solid var(--primary-color);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  z-index: 1;
+}
+
+.plan-btn::before,
+.plan-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transform: skew(0deg);
+  background-color: var(--primary-color);
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.plan-btn::before {
+  left: -10px;
+}
+
+.plan-btn::after {
+  right: -10px;
+}
+
+.plan-btn:hover::before,
+.plan-btn:hover::after {
+  width: 58%;
+}
+
+.plan-btn:hover {
+  color: var(--tertiary-color);
+}
+
+.yellow-skew-lines {
+  position: absolute;
+  right: 24px;
+  top: 25%;
+}
+
+.yellow-skew-lines > span {
+  width: 15px;
+  height: 38px;
+  background-color: var(--primary-color);
+  transform: skew(45deg);
+}
+
+.sec-swiper-pg {
+  top: 106% !important;
+}
+
+/* 
+===================
+LOCATION SECTION
+===================
+*/
+
+.location-sec {
+  padding: 90px 0;
+  background-color: var(--tertiary-color);
+}
+
+.loc-hdr {
+  padding: 80px 0;
+  background: url(../assets/Loc-bg.png) no-repeat center/cover;
+}
+
+.location-left-hdr .title3 {
+  margin-left: 50px;
+}
+
+.location-left-hdr .title3::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  top: -8%;
+  left: -40px;
+  border-radius: 50%;
+  background-color: var(--tertiary-color);
+  border: 5px solid var(--primary-color);
+}
+
+.location-left-hdr .about-yellow-line {
+  top: 2px;
+}
+
+.location-right-hdr {
+  margin-top: 80px;
+}
+
+.location-right-hdr .title2 .fade-span {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 33%,
+    rgba(255, 255, 255, 0) 109%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.location-title2 > .yellow-span {
+  -webkit-text-fill-color: var(--primary-color);
+}
+
+.location-title2 > .white-text {
+  -webkit-text-fill-color: var(--text-color);
+}
+
+.location-row {
+  margin-top: 30px;
+  align-items: center;
+}
+
+.number > p {
+  max-width: 186px;
+  font-size: 81px;
+  line-height: 36px;
+  font-weight: bold;
+  color: var(--text-color);
+  /* padding-right: 30px; */
+  border-right: 1px solid var(--text-color);
+}
+
+.yellow-plus {
+  color: var(--primary-color);
+}
+
+.small-txt {
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.loc-para {
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--text-color);
+}
+
+.loc-img-sec {
+  padding: 0 0 80px;
+}
+
+.loc-img {
+  max-width: 1720px;
+}
+
+.loc-img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* 
+===============
+REAL SECTION
+===============
+*/
+
+.real-sec {
+  background: url("../assets/real-bg.png") no-repeat center / cover;
+  padding: 468px 0 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.real-desc {
+  max-width: 1000px;
+  margin: 0 auto;
+  font-size: 24px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.real-img {
+  max-width: 678px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  top: -12%;
+  margin: 0 auto;
+}
+
+.real-img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.real-hdr > span {
+  font-family: "Akira";
+  font-size: 43px;
+  font-weight: 800;
+  color: var(--text-color);
+}
+
+.real-hdr h1 {
+  font-family: "Akira";
+  font-size: 77px;
+  font-weight: 800;
+  color: var(--primary-color);
+}
+
+.real-hdr {
+  font-size: 30px;
+}
+
+.real-yellow {
+  margin-block: 50px;
+}
+
+.real-yellow .yellow-line::before,
+.real-yellow .yellow-line::after {
+}
+
+.real-yellow > .yellow-line::after {
+  left: 16px;
+}
+
+.real-desc p {
+  font-family: "Clash display";
+  font-size: 34px;
+}
+
+/* 
 ==================
 MEDIA QUERIES
 ==================
@@ -578,6 +1363,10 @@ MEDIA QUERIES
   .title3 {
     font-size: 20px;
     color: var(--text-color);
+  }
+
+  .title4 {
+    font-size: 16px;
   }
 
   /* Header Section */
@@ -659,6 +1448,81 @@ MEDIA QUERIES
     color: var(--card-bg);
     -webkit-text-stroke: 1px var(--text-color-50);
     margin: 0 !important;
+  }
+
+  /* About Gym Section */
+  .about-right-cntn {
+    max-width: 825px;
+    margin: 28px auto 0;
+  }
+
+  /* Service Section */
+  .training-list a {
+    font-size: 28px;
+    font-weight: 900;
+    padding: 50px 0px;
+  }
+
+  /* About Section */
+  .about-hdr .about-yellow-line {
+    top: 2%;
+  }
+
+  .about-card {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .about-card > p {
+    font-size: 18px;
+    margin-top: 2px;
+    opacity: 0.5;
+  }
+
+  .about-card i {
+    margin-bottom: 11px;
+  }
+
+  /* Coach Section */
+  .coach-left-hdr .yellow-line {
+    top: 1px;
+  }
+
+  .coach-left-hdr .title3::before {
+    width: 20px;
+    height: 20px;
+    top: -3%;
+    border: 4px solid var(--primary-color);
+  }
+
+  .coach-left-hdr .about-yellow-line,
+  .coach-left-hdr .about-yellow-line::after,
+  .coach-left-hdr .about-yellow-line::before {
+    width: 7px;
+    height: 18px;
+  }
+
+  /* Plan Section */
+  .plan-left-hdr .title3::before {
+    width: 20px;
+    height: 20px;
+    top: 2%;
+    left: -36px;
+    border-radius: 50%;
+    background-color: var(--tertiary-color);
+    border: 5px solid var(--primary-color);
+  }
+
+  .plan-left-hdr .about-yellow-line,
+  .plan-left-hdr .about-yellow-line::after,
+  .plan-left-hdr .about-yellow-line::before {
+    width: 7px;
+    height: 20px;
+    top: 0;
+  }
+
+  .yellow-skew-lines {
+    top: 18%;
   }
 }
 
@@ -749,6 +1613,39 @@ MEDIA QUERIES
   .card {
     padding: 42px 0 36px 21px;
   }
+
+  /* Service section */
+
+  .training-list a {
+    font-size: 22px;
+    font-weight: 900;
+    padding: 40px 0px;
+  }
+
+  /* Coach Section */
+  .coach-name {
+    font-size: 38px;
+  }
+
+  .coach-title {
+    font-size: 14px;
+    top: 70%;
+  }
+
+  .coach-card {
+    padding: 196px 24px 24px;
+  }
+
+  .coach-name {
+    font-size: 29px;
+    top: 75%;
+  }
+
+  .coach-desc .yellow-line {
+    top: 80px;
+  }
+
+  /* Plan Section */
 }
 
 @media screen and (max-width: 1200px) {
@@ -784,6 +1681,84 @@ MEDIA QUERIES
     width: 323.44px;
     right: -32.5px;
     bottom: 0.1px;
+  }
+
+  /* About Gym Section */
+  .about-left-hdr .title3::before {
+    width: 16px;
+    height: 16px;
+    top: 14%;
+    left: -22px;
+    border: 4px solid var(--primary-color);
+  }
+
+  .about-img {
+    margin: 130px auto 50px;
+  }
+  .about-right-cntn {
+    max-width: 100%;
+    margin: 50px 0 0;
+  }
+
+  /* Service Section */
+  .service-cntn {
+    margin-top: 40px;
+  }
+
+  .service-title3::before {
+    width: 16px;
+    height: 16px;
+    border: 4px solid var(--primary-color);
+  }
+
+  /* About Section */
+  .about-card {
+    margin: 0 auto 20px;
+  }
+
+  /* Coach Section */
+  .coach-card {
+    padding: 154px 18px;
+  }
+
+  .coach-img {
+    top: 10%;
+  }
+
+  .coach-name {
+    font-size: 29px;
+    top: 75%;
+  }
+
+  .coach-title {
+    top: 70%;
+  }
+
+  /* Plan Section */
+  .plan-title {
+    font-size: 16px !important;
+  }
+
+  /* Location Section */
+  .location-title2 {
+    margin-block: 20px;
+  }
+
+  .location-left-hdr .title3::before {
+    width: 20px;
+    height: 20px;
+  }
+
+  .location-left-hdr .about-yellow-line {
+    top: -3px;
+    left: -4px;
+  }
+
+  .location-left-hdr .about-yellow-line,
+  .location-left-hdr .about-yellow-line::after,
+  .location-left-hdr .about-yellow-line::before {
+    height: 20px;
+    width: 6px;
   }
 }
 
@@ -859,9 +1834,94 @@ MEDIA QUERIES
     right: -32.5px;
     bottom: 0.1px;
   }
+
+  /* About Gym Section */
+  .about-yellow-line {
+    margin-left: 10px !important;
+  }
+  .about-yellow-line,
+  .about-yellow-line::after,
+  .about-yellow-line::before {
+    width: 10.78px;
+    height: 14px;
+  }
+  .about-yellow-line::after {
+    left: 38px !important;
+  }
+  .about-yellow-line::before {
+    left: 19px !important;
+  }
+
+  /* Service Section */
+  .training-list a {
+    font-size: 21px;
+    padding: 40px 0px;
+  }
+
+  /* About Section */
+  .about-hdr .title3::before {
+    height: 20px;
+    width: 20px;
+    top: -11%;
+    border: 4px solid var(--primary-color);
+  }
+
+  /* Coach Section */
+
+  .coach-desc .yellow-line::after {
+    left: 24px;
+  }
+
+  .coach-right-hdr .title2 {
+    margin-top: 20px;
+  }
+
+  .coach-desc .yellow-line {
+    top: 119px;
+  }
+
+  /* Plan Section */
+  .plan-yellow-line {
+    margin-left: 45px !important;
+  }
+
+  .plan-right-hdr .title2 {
+    font-size: 35px;
+  }
+
+  .plan-card .yellow-line,
+  .plan-card .yellow-line::before,
+  .plan-card .yellow-line::after {
+    height: 18px;
+    width: 9px;
+  }
+
+  .plan-yellow-line::after {
+    left: 15px;
+  }
+
+  .plan-yellow-line::before {
+    left: -16px;
+  }
+
+  /* Location Section */
+  .location-left-hdr .about-yellow-line,
+  .location-left-hdr .about-yellow-line::after,
+  .location-left-hdr .about-yellow-line::before {
+    height: 17px;
+    width: 6px;
+  }
+
+  .location-left-hdr .about-yellow-line {
+    top: -1px;
+    left: 7px;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .title2 {
+    font-size: 36px;
+  }
 
   .title3 {
     font-size: 14px;
@@ -897,12 +1957,80 @@ MEDIA QUERIES
     right: -28.47px;
     bottom: 0.1px;
   }
+
+  /* About Gym Section */
+
+  .about-left-hdr .title3::before {
+    width: 15px;
+    height: 15px;
+    border: 3px solid var(--primary-color);
+  }
+
+  .about-img {
+    margin: 50px auto 20px;
+  }
+
+  .about-right-cntn {
+    margin: 30px 0 0;
+  }
+
+  .about-right-cntn p {
+    font-size: 28px;
+  }
+
+  .about-desc-row {
+    margin-top: 20px;
+  }
+
+  .right-desc {
+    margin-block: 20px;
+  }
+
+  /* Service Section */
+  .service-title3::before {
+    top: 21%;
+    border: 4px solid var(--primary-color);
+  }
+
+  .service-cntn {
+    margin-top: 80px;
+  }
+
+  .training-list a {
+    font-size: 19px;
+    font-weight: 500;
+    padding: 21px 0px;
+  }
+
+  /* About section */
+  .about-sec {
+    padding: 40px 0;
+  }
+  .about-img {
+    margin-top: 30px;
+  }
+  .about-container {
+    margin-top: 50px;
+  }
+  .about-card {
+    height: 227px;
+    padding: 13px;
+    margin-bottom: 24px;
+  }
+  .about-card > p {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
 @media screen and (max-width: 576px) {
   .title1 {
     font-size: 35px;
     line-height: 36px;
+  }
+
+  .title2 {
+    font-size: 24px;
   }
 
   .title3 {
@@ -965,5 +2093,155 @@ MEDIA QUERIES
   .train-img1 {
     right: -11.06px;
     bottom: 0.1px;
+  }
+
+  /* About Gym Section */
+  .about-left-hdr .title3::before {
+    width: 12px;
+    height: 12px;
+    top: 7px;
+    border: 2px solid var(--primary-color);
+  }
+
+  .about-sec {
+    padding: 60px 0 30px;
+  }
+
+  .about-right-desc-hdr {
+    font-size: 18px;
+  }
+
+  .about-yellow-line,
+  .about-yellow-line::after,
+  .about-yellow-line::before {
+    width: 5.78px;
+    height: 17.08px;
+  }
+
+  .about-yellow-line {
+    margin-left: 9px !important;
+  }
+
+  .about-yellow-line::before {
+    left: 11px !important;
+  }
+
+  .about-yellow-line::after {
+    left: 24px !important;
+  }
+
+  .about-right-desc {
+    margin: 20px 0 0;
+  }
+
+  .desc {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .right-desc {
+    margin-block: 10px;
+  }
+
+  .call-sec {
+    align-items: center;
+  }
+  .contact {
+    margin-left: 0px;
+    max-width: 261px;
+    font-size: 18px;
+  }
+  .contact > a {
+    font-size: 20px;
+    color: var(--text-color);
+  }
+
+  .contact > a > span {
+    font-size: 20px;
+  }
+
+  /* Service Section */
+  .service-hdr .title3::before {
+    width: 12px;
+    height: 12px;
+    border: 2px solid var(--primary-color);
+  }
+
+  .service-sec {
+    padding: 40px 0;
+  }
+
+  .service-hdr .title3 {
+    font-size: 20px;
+  }
+
+  .service-hdr .about-yellow-line {
+    top: 4px;
+  }
+
+  .training-list a {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 15px 0px;
+  }
+
+  /* Location Section */
+  .loc-hdr {
+    padding: 55px 0;
+  }
+
+  .location-right-hdr {
+    margin-top: 30px;
+  }
+
+  .number > p {
+    font-size: 61px;
+    line-height: 33px;
+  }
+
+  .small-txt {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--text-color);
+  }
+
+  .loc-para {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--text-color);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  /* About Gym Section */
+  .about-left-hdr .title3 {
+    font-size: 20px;
+  }
+
+  .about-sec .title2 {
+    font-size: 30px;
+  }
+
+  /* Coach Section */
+  .coach-left-hdr .title3 {
+    font-size: 12px;
+  }
+
+  .coach-right-hdr .title2 {
+    font-size: 28px;
+  }
+
+  /* Plan Section */
+  .price-ben > li {
+    font-size: 14px;
+  }
+
+  .yellow-skew-lines > span {
+    width: 8px;
+    height: 24px;
+  }
+
+  .plan-btn {
+    padding: 20px 0;
   }
 }
