@@ -1317,13 +1317,15 @@ REAL SECTION
   font-size: 43px;
   font-weight: 800;
   color: var(--text-color);
+  margin: 0 auto;
 }
 
-.real-hdr h1 {
+.real-hdr p {
   font-family: "Akira";
   font-size: 77px;
   font-weight: 800;
   color: var(--primary-color);
+  margin: 20px auto;
 }
 
 .real-hdr {
@@ -1334,10 +1336,6 @@ REAL SECTION
   margin-block: 50px;
 }
 
-.real-yellow .yellow-line::before,
-.real-yellow .yellow-line::after {
-}
-
 .real-yellow > .yellow-line::after {
   left: 16px;
 }
@@ -1346,6 +1344,14 @@ REAL SECTION
   font-family: "Clash display";
   font-size: 34px;
 }
+
+/* 
+==================
+FOOTER SECTION
+==================
+*/
+
+
 
 /* 
 ==================
@@ -1916,6 +1922,15 @@ MEDIA QUERIES
     top: -1px;
     left: 7px;
   }
+
+  /* Real Section */
+  .real-hdr > span {
+    font-size: 40px;
+  }
+
+  .real-hdr p {
+    font-size: 60px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -2020,6 +2035,36 @@ MEDIA QUERIES
   .about-card > p {
     font-size: 14px;
     line-height: 22px;
+  }
+
+  /* Real Section */
+  .real-hdr {
+    line-height: 50px;
+    font-size: 50px;
+  }
+
+  .real-hdr > span {
+    font-size: 35px;
+  }
+
+  .real-hdr p {
+    font-size: 45px;
+  }
+
+  .real-yellow {
+    margin-block: 30px;
+  }
+
+  .real-yellow > .yellow-line::after {
+    left: 38px;
+  }
+
+  .real-sec {
+    padding: 387px 0 80px;
+  }
+
+  .real-img {
+    top: -8%;
   }
 }
 
@@ -2210,6 +2255,39 @@ MEDIA QUERIES
     line-height: 24px;
     color: var(--text-color);
   }
+
+  /* Real Section */
+  .real-sec {
+    padding: 205px 0 63px;
+  }
+  .real-desc {
+    font-size: 24px;
+  }
+
+  .real-hdr > span {
+    font-size: 22px;
+    color: var(--text-color);
+  }
+
+  .real-hdr p {
+    font-size: 30px;
+  }
+
+  .real-yellow {
+    margin-block: 14px;
+  }
+
+  .real-yellow > .yellow-line::after {
+    left: 22px;
+  }
+
+  .real-yellow {
+    margin-block: 14px;
+  }
+
+  .real-desc p {
+    font-size: 27px;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -2243,5 +2321,19 @@ MEDIA QUERIES
 
   .plan-btn {
     padding: 20px 0;
+  }
+
+  /* Real Section */
+
+  .real-hdr span {
+    font-size: 17px;
+  }
+
+  .real-hdr p {
+    font-size: 23px;
+  }
+
+  .real-desc p {
+    font-size: 20px;
   }
 }
