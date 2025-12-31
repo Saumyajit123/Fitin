@@ -269,6 +269,202 @@ HEADER SECTION
 }
 
 /* 
+=============
+Modal Part
+=============
+*/
+
+.modal-backdrop {
+  z-index: 1050 !important;
+}
+
+.modal {
+  z-index: 1055 !important;
+}
+
+.modal-dialog {
+  max-width: 1140px;
+}
+
+.modal-content {
+  padding: 10px;
+  border-radius: 10px;
+  background: linear-gradient(to bottom, #f2ff00 -28%, #000000 100%);
+  position: relative;
+}
+
+.modal-header > .title3 {
+  margin-left: 0 !important;
+  margin-top: 10px;
+  font-size: 27px;
+}
+
+.modal-desc {
+  max-width: 455px;
+  margin-block: 0 50px;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--text-color);
+  opacity: 0.5;
+}
+
+.modal-form {
+  width: 100%;
+}
+
+.input-wrpr {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--text-color-10);
+  border: 1px solid var(--text-color-30);
+  margin-bottom: 12px;
+}
+
+.input-wrpr > img {
+  margin-right: 10px;
+}
+
+.input-wrpr > input:focus {
+  border: none;
+  outline: none !important;
+}
+
+#fname,
+#lname,
+#emailname,
+#gender,
+#age,
+#phone,
+#weight,
+#goal,
+#password {
+  width: 100%;
+  background: none;
+  border: none;
+}
+
+#fname::placeholder,
+#lname::placeholder,
+#emailname::placeholder,
+#gender::placeholder,
+#age::placeholder,
+#phone::placeholder,
+#weight::placeholder,
+#goal::placeholder,
+#password::placeholder {
+  color: var(--text-color);
+  text-transform: capitalize;
+  font-size: 15px;
+}
+
+.eye-close {
+  margin-left: 200px;
+}
+
+.terms {
+  margin-block: 12px 24px;
+}
+
+.terms > span {
+  color: #4e4e4e;
+  font-size: 17px;
+  margin-left: 10px;
+}
+
+.terms > a {
+  color: var(--text-color);
+  font-size: 17px;
+  text-decoration: underline;
+}
+
+.submit-btn-wrpr {
+  width: 100%;
+  background-color: var(--primary-color);
+  border-radius: 37.5px;
+  padding: 20px 20px 20px 41px;
+}
+
+#submit-btn {
+  background: none !important;
+  border: none !important;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--tertiary-color);
+}
+
+.modal-right {
+  background: url("../assets/modal-bg.png") no-repeat center/cover;
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.modal-logo {
+  width: 90px;
+  margin-left: auto;
+}
+
+.modal-logo > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-right-cntn {
+  margin-top: 400px;
+}
+
+.modal-right-cntn > p {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-color);
+  opacity: 0.5;
+}
+
+.modal-btn > p {
+  font-weight: 600;
+  font-size: 18px;
+  max-width: 186px;
+  color: var(--text-color);
+}
+
+.line1 {
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: var(--tertiary-color);
+  border: 2px solid var(--text-color);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.line2 {
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: capitalize;
+  color: var(--text-color);
+  margin-left: 10px;
+}
+
+.btn-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: var(--text-color);
+  opacity: 1 !important;
+  border: 1px solid var(--tertiary-color) !important;
+}
+
+/* 
 ==================
 BANNER SECTION
 ==================
@@ -1351,7 +1547,154 @@ FOOTER SECTION
 ==================
 */
 
+.ftr-sec {
+  padding: 80px 0;
+  background-color: var(--tertiary-color);
+}
 
+.ftr-top {
+  padding-bottom: 90px;
+  border-bottom: 1px solid var(--text-color-30);
+}
+
+.ftr-left {
+  max-width: 500px;
+}
+
+.ftr-hdr1,
+.ftr-hdr2 {
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 50px;
+  color: var(--text-color);
+}
+
+.scl-list {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.scl-links {
+  color: var(--text-color);
+  font-size: 21px;
+  font-weight: 500;
+  transition: all 0.3s linear;
+}
+
+.scl-links:hover {
+  color: var(--primary-color);
+}
+
+.scl-links > i {
+  transition: all 0.3s linear;
+}
+
+.scl-links:hover > i {
+  transform: rotate(-45deg) translateX(5px);
+  color: var(--primary-color) !important;
+}
+
+.ftr-right {
+  max-width: 688px;
+}
+
+.ftr-logo {
+  max-width: 650px;
+  margin-left: auto;
+}
+
+.ftr-logo > a {
+  width: 100%;
+  height: 100%;
+}
+
+.ftr-logo > a > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ftr-list {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.ftr-list > li:last-child {
+  margin-right: 0 !important;
+  border: none;
+  padding-right: 0 !important;
+}
+
+.ftr-list > li {
+  margin-right: 14px;
+}
+
+.ftr-links {
+  font-size: 17px;
+  border-right: 1px solid var(--text-color);
+  padding-right: 20px;
+  font-weight: 500;
+  color: var(--text-color);
+  transition: all 0.3s linear;
+}
+
+.ftr-links:hover {
+  color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+.ftr-btm {
+  padding-top: 37px;
+}
+
+.ftr-btm-left {
+  max-width: 500px;
+}
+
+.ftr-btm-left > p {
+  font-size: 20px;
+  margin-top: 15px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.email-form {
+  max-width: 690px;
+}
+
+.email-input-wrpr {
+  max-width: 100%;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  background-color: var(--card-bg);
+}
+
+.email-input {
+  background: none;
+  border: none;
+}
+
+.email-input:focus {
+  border: none;
+  outline: none;
+}
+
+.email-input::placeholder {
+  color: var(--text-color);
+  font-size: 20px;
+}
+
+.email-input-wrpr > .nav-btn {
+  margin: 0;
+  padding: 20px 27px 20px 40px;
+}
+
+.email-input-wrpr > .nav-btn:hover img {
+  transform: translateX(-3em) scale(3);
+}
 
 /* 
 ==================
@@ -1547,10 +1890,10 @@ MEDIA QUERIES
   .offcanvas {
     flex-direction: column !important;
     text-align: center;
-    background: rgba(0, 0, 0, 0.4); /* semi-transparent black */
-    backdrop-filter: blur(20px); /* blur intensity for glass effect */
-    -webkit-backdrop-filter: blur(20px); /* for Safari support */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* optional: subtle glass border */
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .navbar-nav {
@@ -1651,7 +1994,15 @@ MEDIA QUERIES
     top: 80px;
   }
 
-  /* Plan Section */
+  /* Footer Section */
+  .ftr-list > li {
+    margin-right: 13px;
+  }
+
+  .ftr-links {
+    padding-right: 13px;
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -1662,6 +2013,22 @@ MEDIA QUERIES
 
   .title3 {
     font-size: 16px;
+  }
+
+  /* Modal Section */
+  .input-wrpr {
+    padding: 10px;
+  }
+  #fname::placeholder,
+  #lname::placeholder,
+  #emailname::placeholder,
+  #gender::placeholder,
+  #age::placeholder,
+  #phone::placeholder,
+  #weight::placeholder,
+  #goal::placeholder,
+  #password::placeholder {
+    font-size: 14px;
   }
 
   /* Banner Section */
@@ -1766,6 +2133,29 @@ MEDIA QUERIES
     height: 20px;
     width: 6px;
   }
+
+  /* Footer Section */
+  .ftr-row {
+    flex-direction: column-reverse;
+  }
+
+  .ftr-right {
+    margin: 0 auto 80px;
+  }
+
+  .ftr-left {
+    margin: 0 auto;
+  }
+
+  .ftr-list {
+    margin-top: 30px;
+    justify-content: center;
+  }
+
+  .ftr-hdr1,
+  .ftr-hdr2 {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -1778,6 +2168,36 @@ MEDIA QUERIES
   .nav-link {
     padding: 13px 13px !important;
   }
+
+  /* Modal Section */
+  .input-wrpr {
+    padding: 8px;
+  }
+
+  .input-wrpr > img {
+    margin-right: 10px;
+  }
+
+  #fname::placeholder,
+  #lname::placeholder,
+  #emailname::placeholder,
+  #gender::placeholder,
+  #age::placeholder,
+  #phone::placeholder,
+  #weight::placeholder,
+  #goal::placeholder,
+  #password::placeholder {
+    font-size: 12px;
+  }
+
+  .line2 {
+    font-size: 14px;
+  }
+
+  input[type="radio"] {
+    width: 14px;
+    height: 14px;
+}
 
   /* Banner Section */
   .banner-sec::before {
@@ -1931,6 +2351,15 @@ MEDIA QUERIES
   .real-hdr p {
     font-size: 60px;
   }
+
+  /* Footer Section */
+  .ftr-btm-left {
+    margin: 0 auto 50px;
+  }
+
+  .email-form {
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1945,6 +2374,21 @@ MEDIA QUERIES
   .banner-sec::before {
     width: 370px;
     height: 514px;
+  }
+
+  /* Modal */
+  .modal-desc {
+    margin-block: 0 24px;
+    font-size: 16px;
+    line-height: 23px;
+  }
+
+  .modal-right {
+    margin-top: 12px;
+  }
+
+  .modal-right-cntn {
+    margin-top: 260px;
   }
 
   /* Training Section */
@@ -2066,6 +2510,15 @@ MEDIA QUERIES
   .real-img {
     top: -8%;
   }
+
+  /* Footer Section */
+  .ftr-list > li {
+    margin-right: 11px;
+  }
+
+  .ftr-links {
+    padding-right: 11px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -2086,6 +2539,54 @@ MEDIA QUERIES
   /* Header Section */
   .navbar-brand {
     width: 130px;
+  }
+
+  /* Modal */
+  .modal-content {
+    padding: 5px;
+    border-radius: 10px;
+  }
+
+  .modal-header > .smaller-yellow-line {
+    margin-left: 61px;
+  }
+
+  #submit-btn {
+    font-size: 14px;
+  }
+
+  .submit-btn-wrpr {
+    padding: 12px;
+  }
+
+  .modal-right {
+    padding: 15px;
+  }
+
+  .modal-right-cntn > p {
+    font-size: 14px;
+  }
+
+  .modal-btm > p {
+    font-size: 14px;
+  }
+
+  .line1 {
+    font-size: 12px;
+  }
+
+  input[type="radio"] {
+    width: 15px;
+    height: 12px;
+  }
+
+  .line2 {
+    font-size: 14px;
+    margin-left: 7px;
+  }
+
+  .modal-right-cntn {
+    margin-top: 140px;
   }
 
   /* Banner Section */
@@ -2287,6 +2788,58 @@ MEDIA QUERIES
 
   .real-desc p {
     font-size: 27px;
+  }
+
+  /* Footer Section */
+  .ftr-sec {
+    padding: 60px 0;
+  }
+
+  .ftr-top {
+    padding-bottom: 32px;
+  }
+
+  .ftr-hdr1,
+  .ftr-hdr2 {
+    font-size: 30px;
+    line-height: 39px;
+  }
+
+  .scl-list {
+    margin-top: 27px;
+  }
+
+  .scl-links {
+    font-size: 16px;
+  }
+
+  .ftr-list > li {
+    margin-right: 2px;
+  }
+
+  .ftr-links {
+    padding-right: 10px;
+    font-size: 10px;
+  }
+
+  .ftr-btm-left > p {
+    font-size: 16px;
+  }
+
+  .email-input-wrpr {
+    padding: 9px 13px;
+  }
+
+  .email-input-wrpr > .nav-btn {
+    padding: 20px 27px 20px 26px;
+  }
+
+  .ftr-btn > span {
+    display: none;
+  }
+
+  .email-input::placeholder {
+    font-size: 14px;
   }
 }
 

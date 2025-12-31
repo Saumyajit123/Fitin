@@ -34,8 +34,16 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
+  // AOS JS:
   AOS.init({
     once: false,
+  });
+
+  // Luxy JS:
+  luxy.init({
+    wrapper: "#luxy",
+    targets: ".luxy-el",
+    wrapperSpeed: 0.08,
   });
 
   const swiperSec = new Swiper(".coach-swiper", {
