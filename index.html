@@ -49,37 +49,38 @@
                                         <div class="col-12 col-md-6">
                                             <div class="input-wrpr d-flex">
                                                 <img src="./assets/name-logo.png" alt="" />
-                                                <input type="text" id="fname" placeholder="Firstname*" />
+                                                <input type="text" id="fname" placeholder="Firstname*" required />
                                             </div>
                                         </div>
                                         <div class="col-12 col-md-6">
                                             <div class="input-wrpr d-flex">
                                                 <img src="./assets/name-logo.png" alt="" />
-                                                <input type="text" id="lname" placeholder="Lastname*" />
+                                                <input type="text" id="lname" placeholder="Lastname*" required />
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="input-wrpr d-flex">
                                                 <img src="./assets/email-logo.png" alt="" />
-                                                <input type="email" id="emailname" placeholder="Email Address*" />
+                                                <input type="email" id="emailname" placeholder="Email Address*"
+                                                    required />
                                             </div>
                                         </div>
                                         <div class="col-12 col-md-4">
                                             <div class="input-wrpr d-flex">
                                                 <img src="./assets/name-logo.png" alt="" />
-                                                <input type="text" id="gender" placeholder="Gender*" />
+                                                <input type="text" id="gender" placeholder="Gender*" required />
                                             </div>
                                         </div>
                                         <div class="col-12 col-md-3">
                                             <div class="input-wrpr d-flex">
                                                 <img src="./assets/age-logo.png" alt="" />
-                                                <input type="number" id="age" placeholder="Age*" />
+                                                <input type="number" id="age" placeholder="Age*" required />
                                             </div>
                                         </div>
                                         <div class="col-12 col-md-5">
                                             <div class="input-wrpr d-flex">
                                                 <img src="./assets/pass=logo.png" alt="" />
-                                                <input type="number" id="phone" placeholder="Phone*" />
+                                                <input type="number" id="phone" placeholder="Phone*" required />
                                             </div>
                                         </div>
                                         <div class="col-12 col-md-5">
@@ -97,14 +98,28 @@
                                         <div class="col-12">
                                             <div class="input-wrpr d-flex">
                                                 <img src="./assets/pass=logo.png" alt="" />
-                                                <input type="password" id="password" placeholder="Password*" />
-                                                <img src="./assets/not-seen-logo.png" alt="" class="not-seen" />
+                                                <p class="error"></p>
+                                                <input type="password" class="pass-fld" id="password"
+                                                    placeholder="Password*" required />
+                                                <span class="eye">
+
+                                                    <svg width="26" height="21" viewBox="0 0 26 21" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M1.09375 0.234375L24.8828 18.9844C25.1172 19.1797 25.1953 19.6094 24.9609 19.8438C24.7656 20.1172 24.375 20.1953 24.1016 19.9609L0.351562 1.21094C0.078125 1.01562 0 0.585938 0.234375 0.351562C0.429688 0.078125 0.859375 0 1.09375 0.234375ZM23.75 10.5859C23.3594 11.5234 22.6562 12.8125 21.6406 14.0625L20.6641 13.2812C21.6016 12.1094 22.2266 10.9766 22.6172 10.0781C22.0703 8.82812 20.9375 6.95312 19.2578 5.39062C17.5781 3.82812 15.3516 2.57812 12.6172 2.57812C11.0547 2.57812 9.64844 3.00781 8.4375 3.63281L7.38281 2.77344C8.86719 1.91406 10.5859 1.32812 12.6172 1.32812C15.7422 1.32812 18.2812 2.77344 20.1172 4.49219C21.9531 6.17188 23.1641 8.20312 23.75 9.60938C23.8672 9.92188 23.8672 10.2734 23.75 10.5859ZM3.55469 6.13281L4.53125 6.91406C3.59375 8.04688 2.96875 9.21875 2.61719 10.0781C3.125 11.3281 4.25781 13.2031 5.9375 14.7656C7.61719 16.3281 9.84375 17.5781 12.6172 17.5781C14.1406 17.5781 15.5469 17.1875 16.7578 16.5625L17.8125 17.4219C16.3672 18.2812 14.6094 18.8281 12.6172 18.8281C9.45312 18.8281 6.91406 17.4219 5.07812 15.7031C3.24219 13.9844 2.03125 11.9531 1.44531 10.5859C1.32812 10.2734 1.32812 9.92188 1.44531 9.60938C1.83594 8.67188 2.53906 7.38281 3.55469 6.13281ZM12.6172 15.0781C9.84375 15.0781 7.61719 12.8516 7.61719 10.0781C7.61719 9.84375 7.61719 9.60938 7.65625 9.375L8.86719 10.3125C8.98438 12.3047 10.625 13.8281 12.6172 13.8281C12.8125 13.8281 13.0469 13.8281 13.2422 13.7891L14.4531 14.7266C13.8672 14.9609 13.2422 15.0781 12.6172 15.0781ZM17.6172 10.0781V10.1172C17.6172 10.3516 17.5781 10.5859 17.5391 10.8203L16.3281 9.88281C16.2109 7.89062 14.6094 6.36719 12.6172 6.36719C12.3828 6.36719 12.1484 6.36719 11.9531 6.40625L10.7422 5.46875C11.3281 5.23438 11.9531 5.07812 12.6172 5.07812C15.3516 5.07812 17.6172 7.34375 17.6172 10.0781Z"
+                                                            fill="white" fill-opacity="0.3" />
+                                                    </svg>
+
+                                                </span>
                                             </div>
                                         </div>
                                         <div class="terms">
-                                            <img src="./assets/modal-check.png" alt="" /><span>I agree to the
-                                            </span><a href="">Terms &
-                                                Privacy</a>
+                                            <label class="terms-check">
+                                                <input type="checkbox" id="agree" required />
+                                                <span class="check-ui"></span>
+                                                <span class="agree">I agree to the</span>
+                                                <a href="">Terms & Privacy</a>
+                                            </label>
                                         </div>
                                         <div class="col-12">
                                             <a href=""
@@ -173,7 +188,7 @@
                                 <a class="nav-link active" aria-current="page" href="#">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="">About Us</a>
+                                <a class="nav-link" href="./about.html">About Us</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -407,15 +422,15 @@
                                         Empowering Every Body to Move Stronger, Live Better, and Go Further
                                     </h2>
                                     <div class="about-right-cntn">
-                                        <p data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="500"
-                                            data-aos-offset="0">
+                                        <p data-aos="fade-up" data-aos-duration="1000">
                                             We believe fitness is more than just physical. It’s about building
                                             confidence,
                                             discipline, and a lifestyle you can be proud of.
                                         </p>
                                         <div class="row about-desc-row">
                                             <div class="col-12 col-md-6">
-                                                <div class="left-desc desc">
+                                                <div class="left-desc desc" data-aos="fade-right" data-aos-offset="300"
+                                                    data-aos-easing="ease-in-sine">
                                                     Founded with the version of creating a spacet for
                                                     all fitness levels .Our gym offers expert guidence
                                                     modern equipment and an uplifting atmosphere to help
@@ -423,7 +438,8 @@
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-6">
-                                                <div class="right-desc desc">
+                                                <div class="right-desc desc" data-aos="fade-left" data-aos-offset="300"
+                                                    data-aos-easing="ease-in-sine">
                                                     Whether you’re a beginner or a seasoned athlete.
                                                     We’re here to support your journey with personalized
                                                     training, diverseprograms and a community that
@@ -454,7 +470,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-xl-4">
-                            <div class="service-hdr d-flex">
+                            <div class="service-hdr d-flex" data-aos="fade-down">
                                 <h3 class="title3 service-title3 position-relative">Services</h3>
                                 <span class="yellow-line smaller-yellow-line about-yellow-line"></span>
                             </div>
@@ -489,7 +505,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-xl-6">
-                            <div class="about-hdr d-flex">
+                            <div class="about-hdr d-flex" data-aos="fade-down">
                                 <h3 class="title3 service-title3 position-relative">About Our Gym</h3>
                                 <span class="yellow-line smaller-yellow-line about-yellow-line"></span>
                             </div>
@@ -582,7 +598,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-lg-6">
-                            <div class="coach-left-hdr d-flex">
+                            <div class="coach-left-hdr d-flex" data-aos="fade-down">
                                 <h3 class="title3 coach-title3 position-relative">meet your coaches</h3>
                                 <span class="yellow-line smaller-yellow-line about-yellow-line"></span>
                             </div>
@@ -599,7 +615,7 @@
                         </div>
                     </div>
                     <div class="swiper coach-swiper">
-                        <div class="swiper-wrapper">
+                        <div class="swiper-wrapper d-flex align-items-center">
                             <!-- Slides -->
                             <div class="swiper-slide coach-slide">
                                 <div class="coach-card coach1">
@@ -685,7 +701,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-lg-6">
-                            <div class="plan-left-hdr d-flex">
+                            <div class="plan-left-hdr d-flex" data-aos="fade-down">
                                 <h3 class="title3 plan-title3 position-relative">Choose Your Plan</h3>
                                 <span class="yellow-line smaller-yellow-line about-yellow-line"></span>
                             </div>
@@ -820,7 +836,7 @@
             <section class="location-sec">
                 <div class="loc-hdr">
                     <div class="container">
-                        <div class="location-left-hdr d-flex">
+                        <div class="location-left-hdr d-flex" data-aos="fade-down">
                             <h3 class="title3 about-title3 position-relative">our locations</h3>
                             <span class="yellow-line smaller-yellow-line about-yellow-line"></span>
                         </div>

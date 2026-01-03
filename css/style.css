@@ -163,6 +163,12 @@ HEADER SECTION
   border: 1px solid #ffe6004d;
   width: 220px !important;
   border-radius: 300px;
+  color: var(--text-color);
+}
+
+.dropdown-item:hover {
+  background: linear-gradient(90deg, rgb(3 3 3 / 80%) 0%, #8a8b00 100%);
+
 }
 
 .navbar-nav .nav-link.show {
@@ -176,6 +182,7 @@ HEADER SECTION
 .search-wrpr {
   width: 100%;
   padding: 15px 15px;
+  margin-right: 7px;
   border-radius: 74px;
   background-color: var(--tertiary-color);
 }
@@ -210,6 +217,9 @@ HEADER SECTION
   align-items: center;
   justify-content: center;
   background-color: var(--primary-color);
+}
+
+.cart-bg:hover {
 }
 
 .cart-bg > img {
@@ -268,6 +278,11 @@ HEADER SECTION
   background: var(--primary-color) !important;
 }
 
+.navbar-toggler:focus {
+  text-decoration: none;
+  box-shadow: none;
+}
+
 /* 
 =============
 Modal Part
@@ -313,8 +328,9 @@ Modal Part
 }
 
 .input-wrpr {
+  align-items: center;
   width: 100%;
-  padding: 15px;
+  padding: 11px;
   background-color: var(--text-color-10);
   border: 1px solid var(--text-color-30);
   margin-bottom: 12px;
@@ -354,24 +370,74 @@ Modal Part
 #password::placeholder {
   color: var(--text-color);
   text-transform: capitalize;
-  font-size: 15px;
+  font-size: 12px;
 }
 
-.eye-close {
-  margin-left: 200px;
+.pass-fld span {
+  display: inline-block;
 }
 
 .terms {
   margin-block: 12px 24px;
 }
 
-.terms > span {
-  color: #4e4e4e;
-  font-size: 17px;
-  margin-left: 10px;
+.eye {
+  cursor: pointer;
 }
 
-.terms > a {
+.eye.active svg {
+  opacity: 1;
+}
+
+.terms-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+/* hide real checkbox */
+.terms-check input {
+  display: none;
+}
+
+/* circle */
+.check-ui {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #e6ff00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+/* tick */
+.check-ui::after {
+  content: "✓";
+  font-size: 15px;
+  font-weight: bold;
+  color: #000;
+  display: none;
+}
+
+/* checked state */
+.terms-check input:checked + .check-ui {
+  background-color: #e6ff00;
+}
+
+.terms-check input:checked + .check-ui::after {
+  display: block;
+}
+
+.terms .agree {
+  color: #4e4e4e;
+  font-size: 17px;
+  margin: 0 10px;
+}
+
+.terms a {
   color: var(--text-color);
   font-size: 17px;
   text-decoration: underline;
@@ -1093,7 +1159,7 @@ COACH SECTION
 
 .coach-card {
   min-height: 452px;
-  padding: 317px 24px 24px;
+  padding: 24px;
   position: relative;
 }
 
@@ -1121,6 +1187,11 @@ COACH SECTION
   object-fit: cover;
 }
 
+.coach-desc {
+  position: absolute;
+  bottom: 12px;
+}
+
 .coach-desc > .yellow-line,
 .coach-desc > .yellow-line::after,
 .coach-desc > .yellow-line::before {
@@ -1133,18 +1204,15 @@ COACH SECTION
 }
 
 .coach-desc > .yellow-line {
+  position: absolute;
   margin-left: 2px !important;
-  bottom: 21px;
+  top: -29px;
 }
 
 .coach-title {
   color: var(--text-color);
   font-weight: 900;
   font-family: "Akira";
-  position: absolute;
-  bottom: 85px;
-  z-index: 999;
-  margin-bottom: 15px;
 }
 
 .coach-name {
@@ -1152,8 +1220,6 @@ COACH SECTION
   font-weight: 200;
   font-size: 53px;
   color: var(--text-color);
-  position: absolute;
-  z-index: 999;
 }
 
 .swiper-pagination {
@@ -1990,10 +2056,6 @@ MEDIA QUERIES
     top: 75%;
   }
 
-  .coach-desc .yellow-line {
-    top: 80px;
-  }
-
   /* Footer Section */
   .ftr-list > li {
     margin-right: 13px;
@@ -2169,6 +2231,11 @@ MEDIA QUERIES
     padding: 13px 13px !important;
   }
 
+  .offcanvas {
+    padding: 20px;
+    max-height: fit-content;
+  }
+
   /* Modal Section */
   .input-wrpr {
     padding: 8px;
@@ -2197,7 +2264,7 @@ MEDIA QUERIES
   input[type="radio"] {
     width: 14px;
     height: 14px;
-}
+  }
 
   /* Banner Section */
   .banner-sec::before {
@@ -2300,10 +2367,6 @@ MEDIA QUERIES
 
   .coach-right-hdr .title2 {
     margin-top: 20px;
-  }
-
-  .coach-desc .yellow-line {
-    top: 119px;
   }
 
   /* Plan Section */
@@ -2851,6 +2914,10 @@ MEDIA QUERIES
 
   .about-sec .title2 {
     font-size: 30px;
+  }
+
+  .about-right-hdr .title2 {
+    font-size: 37px;
   }
 
   /* Coach Section */
