@@ -160,4 +160,13 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   counters.forEach((counter) => observer.observe(counter));
+
+  // Loader Part:
+  window.addEventListener("load", function () {
+    const loader = document.getElementById("page-loader");
+
+    setTimeout(() => {
+      loader.classList.add("hide");
+    }, 500); // delay for smooth exit
+  });
 });

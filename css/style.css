@@ -76,6 +76,63 @@ ul {
 }
 
 /* 
+====================
+LOADER PART
+====================
+*/
+
+#page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--tertiary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Spinner */
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #334155;
+  border-top: 6px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+#page-loader p {
+  margin-top: 15px;
+  color: #e2e8f0;
+  font-family: Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+/* Hide Loader */
+#page-loader.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Content */
+.content {
+  padding: 50px;
+  font-family: Arial, sans-serif;
+}
+
+/* Animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 
 =================
 HEADER SECTION
 =================
@@ -1639,7 +1696,8 @@ FOOTER SECTION
 
 .social-list {
   width: 100%;
-  margin-top: 50px;
+  margin-top: 22px;
+  padding: 0;
 }
 
 .social-links {
@@ -1667,7 +1725,7 @@ FOOTER SECTION
 }
 
 .footer-logo {
-  max-width: 650px;
+  width: 650px;
   margin-left: auto;
 }
 
@@ -1685,6 +1743,7 @@ FOOTER SECTION
 .footer-list {
   width: 100%;
   margin-top: 20px;
+  padding: 0;
 }
 
 .footer-list > li:last-child {
@@ -1731,7 +1790,8 @@ FOOTER SECTION
 }
 
 .email-input-wrpr {
-  max-width: 100%;
+  width: 100%;
+  max-width: 860px;
   border-radius: 100px;
   display: flex;
   align-items: center;
@@ -2687,6 +2747,19 @@ MEDIA QUERIES
     margin: 50px 0 0;
   }
 
+  /* About Section */
+  .about-left-hdr .title3 {
+    font-size: 20px;
+  }
+
+  .about-right-hdr .title2 {
+    font-size: 38px;
+  }
+
+  .about-right-cntn p {
+    font-size: 25px;
+  }
+
   /* Training Section */
   .slide {
     height: 252.1px;
@@ -2807,6 +2880,16 @@ MEDIA QUERIES
     padding: 15px 0px;
   }
 
+  /* Plan Section */
+  .title3 {
+    font-size: 17px;
+  }
+
+  .plan-left-hdr .title3 {
+    margin-left: 37px;
+    margin-bottom: 19px;
+  }
+
   /* Location Section */
   .loc-hdr {
     padding: 55px 0;
@@ -2917,6 +3000,10 @@ MEDIA QUERIES
   .email-input::placeholder {
     font-size: 14px;
   }
+
+  .email-input-wrpr > .nav-btn:hover img {
+    transform: scale(2);
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -2980,5 +3067,23 @@ MEDIA QUERIES
 
   .real-desc p {
     font-size: 20px;
+  }
+
+  /* Footer Section */
+  .footer-links {
+    padding-right: 10px;
+    font-size: 8px;
+  }
+
+  .email-input-wrpr > .nav-btn {
+    padding: 10px 15px;
+  }
+
+  .nav-btn > span {
+    display: none;
+  }
+
+  .email-input-wrpr > .nav-btn:hover img {
+    transform: rotate(-45deg);
   }
 }

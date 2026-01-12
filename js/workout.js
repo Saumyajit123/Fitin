@@ -54,4 +54,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     iso.arrange({ filter: filterValue });
   }
+
+  // Loader Part:
+  window.addEventListener("load", function () {
+    const loader = document.getElementById("page-loader");
+
+    setTimeout(() => {
+      loader.classList.add("hide");
+    }, 500); // delay for smooth exit
+  });
+  
 });
