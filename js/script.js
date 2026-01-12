@@ -51,9 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // From Home Page:
   const swiper = new Swiper(".myswiper", {
-    slidesPerView: 3,
-
-    slidesToMove: 1,
+    slidesPerView: 1,
 
     // centeredSlides: true,
 
@@ -67,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     direction: "horizontal",
 
     breakpoints: {
-      768: {
+      576: {
         slidesPerView: 2,
       },
 
@@ -75,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
         slidesPerView: 3,
       },
 
-      // 1200: {
+      // 1400: {
       //   slidesPerView: 3,
       // },
     },
@@ -95,9 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // From Home Page:
   const swiperSec = new Swiper(".coach-swiper", {
-    slidesPerView: 3,
-
-    slidesToMove: 1,
+    slidesPerView: 1,
 
     // centeredSlides: true,
 
@@ -115,11 +111,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     breakpoints: {
       768: {
-        slidesPerView: 1,
+        slidesPerView: 2,
       },
 
       992: {
-        slidesPerView: 2,
+        slidesPerView: 3,
       },
 
       // 1400: {
