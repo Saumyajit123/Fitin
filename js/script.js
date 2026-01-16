@@ -66,16 +66,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     breakpoints: {
       576: {
+        slidesPerView: 1,
+      },
+
+      768: {
         slidesPerView: 2,
       },
 
-      992: {
+      1400: {
         slidesPerView: 3,
       },
-
-      // 1400: {
-      //   slidesPerView: 3,
-      // },
     },
   });
 
@@ -85,11 +85,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Luxy JS:
-  luxy.init({
-    wrapper: "#luxy",
-    targets: ".luxy-el",
-    wrapperSpeed: 0.08,
-  });
+  // luxy.init({
+  //   wrapper: "#luxy",
+  //   targets: ".luxy-el",
+  //   wrapperSpeed: 0.08,
+  // });
 
   // From Home Page:
   const swiperSec = new Swiper(".coach-swiper", {

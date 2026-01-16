@@ -1,7 +1,6 @@
-document.addEventListener("DOMContentLoaded", ()=> {
-
-    // About Section:
-    const swiperAbout = new Swiper(".about-swiper", {
+document.addEventListener("DOMContentLoaded", () => {
+  // About Section:
+  const swiperAbout = new Swiper(".about-swiper", {
     slidesPerView: 1,
     centeredSlides: true,
     loop: true,
@@ -11,7 +10,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
       delay: 1500,
       disableOnInteraction: false,
     },
-    
+
     pagination: {
       el: ".about-pagination",
       clickable: true,
@@ -53,25 +52,33 @@ document.addEventListener("DOMContentLoaded", ()=> {
 
   counters.forEach((counter) => observer.observe(counter));
 
-   // INIT ISOTOPE
-  var grid = document.querySelector('.grid');
+  // Workout section swiper part:
+  const swiperWork = new Swiper(".filter-btn-cntn", {
+    // centeredSlides: true,
+    loop: true,
+    freeMode: true,
+    // spaceBetween: 30,
+
+  });
+
+  // INIT ISOTOPE
+  var grid = document.querySelector(".grid");
   var iso = new Isotope(grid, {
-    itemSelector: '.element-card',
-    layoutMode: 'fitRows'
+    itemSelector: ".element-card",
+    layoutMode: "fitRows",
   });
 
   // FILTER BUTTON CLICK
-  var filterBtns = document.querySelectorAll('.button-iso');
+  var filterBtns = document.querySelectorAll(".button-iso");
 
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', function () {
-
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", function () {
       // remove active class
-      filterBtns.forEach(b => b.classList.remove('active-btn'));
-      this.classList.add('active-btn');
+      filterBtns.forEach((b) => b.classList.remove("active-btn"));
+      this.classList.add("active-btn");
 
       // filter items
-      var filterValue = this.getAttribute('data-filter');
+      var filterValue = this.getAttribute("data-filter");
       iso.arrange({ filter: filterValue });
     });
   });
@@ -79,5 +86,4 @@ document.addEventListener("DOMContentLoaded", ()=> {
   AOS.init({
     once: false,
   });
-  
-})
+});

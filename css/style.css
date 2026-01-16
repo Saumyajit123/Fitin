@@ -160,6 +160,10 @@ HEADER SECTION
   align-items: center;
 }
 
+.offcanvas.offcanvas-end {
+  height: 100vh;
+}
+
 .navbar-nav {
   max-width: 1305px;
   padding: 3px;
@@ -228,6 +232,7 @@ HEADER SECTION
   background: linear-gradient(180deg, rgba(3, 3, 3, 80%) 70%, #8a8b00 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  /* transition: all 0.3s ease-in; */
 }
 
 .navbar-nav .nav-link.show {
@@ -252,6 +257,10 @@ HEADER SECTION
   object-fit: contain;
 }
 
+.search-wrpr .form-control:focus {
+  box-shadow: none;
+}
+
 .search-input {
   background: none;
   border: none;
@@ -266,6 +275,7 @@ HEADER SECTION
   background: none;
   outline: none !important;
   border: none !important;
+  color: var(--text-color);
 }
 
 .cart-bg {
@@ -278,12 +288,12 @@ HEADER SECTION
   background-color: var(--primary-color);
 }
 
-.cart-bg:hover {
+.cart-bg:hover svg {
+  transform: scale(1.3);
 }
 
-.cart-bg > img {
-  width: 24px;
-  height: 24px;
+.cart-bg:hover svg {
+  transition: all 0.3s ease-in-out;
 }
 
 .nav-btn > img {
@@ -788,48 +798,58 @@ TRAINING SECTION
 */
 
 .category-sec {
-  padding: 20px 0;
+  padding: 80px 0;
   position: relative;
   background-color: var(--tertiary-color);
 }
 
-.swiper {
-  width: 100%;
+.card-container {
+  max-width: 1940px;
+  padding: 0;
+}
+
+/* .myswiper {
   overflow: visible;
-}
+} */
 
-.myswiper {
-  overflow: hidden;
-}
-
-.swiper-slide {
+/* .swiper-slide {
   max-width: 640px;
   height: 380.1px;
   background-color: var(--tertiary-color);
-  padding: 24px;
+  padding: 34px;
   border: 1px solid var(--text-color-30);
   margin: 0 auto;
   overflow: visible;
+} */
+
+.swiper-slide-cntn {
+  max-width: 592px;
+  overflow: visible;
+}
+
+.fitness-slide {
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .card {
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding: 50px 0 50px 50px;
+  z-index: 999;
   position: relative !important;
 }
 
 .card1 {
   background: url("../assets/trainbg-1.png") no-repeat center/cover;
+  padding: 50px;
 }
 
 .card2 {
   background: url("../assets/trainbg-2.png") no-repeat center/cover;
+  padding: 50px;
 }
 
 .card3 {
   background: url("../assets/trainbg-3.png") no-repeat center/cover;
+  padding: 50px;
 }
 
 .smaller-yellow-line {
@@ -860,42 +880,45 @@ TRAINING SECTION
 }
 
 .train-img1 {
-  width: 196.06px;
+  max-width: 196px;
   position: absolute;
-  right: 19.94px;
-  bottom: 0;
+  right: 10px;
+  bottom: 35px;
+  z-index: -1;
 }
 
 .train-img1 > img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .train-img2 {
-  width: 201.47px;
+  max-width: 211px;
   position: absolute;
-  right: 38.53px;
-  bottom: 0.1px;
+  right: 0px;
+  bottom: 35px;
+  z-index: -1;
 }
 
 .train-img2 > img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .train-img3 {
-  width: 485.44px;
+  max-width: 480px;
   position: absolute;
-  right: 14.5px;
-  bottom: 0.1px;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
 .train-img3 > img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* 
@@ -995,6 +1018,7 @@ ABOUT GYM SECTION
 
 .call-img {
   max-width: 99.28px;
+  cursor: pointer;
 }
 
 .call-img > img {
@@ -1721,20 +1745,20 @@ FOOTER SECTION
 }
 
 .footer-right {
-  max-width: 688px;
+  max-width: 634px;
 }
 
 .footer-logo {
-  width: 650px;
   margin-left: auto;
+  max-width: 650px;
 }
 
 .footer-logo > a {
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 
-.ooterr-logo > a > img {
+.footer-logo > a > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1753,7 +1777,7 @@ FOOTER SECTION
 }
 
 .footer-list > li {
-  margin-right: 14px;
+  margin-right: 12px;
 }
 
 .footer-links {
@@ -1808,6 +1832,7 @@ FOOTER SECTION
 .email-input:focus {
   border: none;
   outline: none;
+  color: var(--text-color);
 }
 
 .email-input::placeholder {
@@ -1897,34 +1922,6 @@ MEDIA QUERIES
 
   .yellow-line {
     margin-left: 63px;
-  }
-
-  /* Training Section */
-  .train-img1 {
-    width: 181.06px;
-    position: absolute;
-    right: 50.94px !important;
-    bottom: 0.1px;
-  }
-  .train-img2 {
-    width: 184.47px;
-    position: absolute;
-    right: 50.53px !important;
-    bottom: 0.1px;
-  }
-  .train-img3 {
-    width: 380.44px;
-    position: absolute;
-    right: 50.5px !important;
-    bottom: 0.1px;
-  }
-
-  .card p {
-    font-family: "Akira";
-    font-size: 114px;
-    color: var(--card-bg);
-    -webkit-text-stroke: 1px var(--text-color-50);
-    margin: 0 !important;
   }
 
   /* About Gym Section */
@@ -2086,11 +2083,6 @@ MEDIA QUERIES
     margin-top: 38px;
   }
 
-  /* Training Section */
-  .card {
-    padding: 42px 0 36px 21px;
-  }
-
   /* Service section */
 
   .training-list a {
@@ -2166,17 +2158,23 @@ MEDIA QUERIES
 
   /* Training Section */
   .card {
-    padding: 30px 0 27px 21px;
+    padding: 30px;
   }
-  .smaller-yellow-line {
-    margin-left: 50px !important;
+
+  .train-img1 {
+    max-width: 196px;
+    transform: none;
+    bottom: 0;
   }
-  .card p {
-    font-size: 90px;
+
+  .train-img2 {
+    max-width: 200px;
+    transform: none;
+    bottom: 0;
   }
-  .train-img3 {
-    width: 350.44px;
-    right: 50.5px !important;
+
+  .card .title3 {
+    font-size: 18px;
   }
 
   /* About Gym Section */
@@ -2368,24 +2366,8 @@ MEDIA QUERIES
   }
 
   /* Training Section */
-  .slide {
-    height: 271.1px;
-  }
-  .train-img1 {
-    width: 183.06px !important;
-
-    /* right: -23.06px; */
-    bottom: 0.1px;
-  }
-  .train-img2 {
-    width: 180.47px !important;
-
-    right: -27.47px;
-    bottom: 0.1px;
-  }
   .train-img3 {
-    width: 318.44px !important;
-    bottom: 0.1px;
+    max-width: 406px;
   }
 
   /* About Gym Section */
@@ -2512,32 +2494,6 @@ MEDIA QUERIES
 
   .modal-right-cntn {
     margin-top: 260px;
-  }
-
-  /* Training Section */
-  .slide {
-    height: 268.1px;
-  }
-
-  .card p {
-    font-size: 77px;
-  }
-
-  .train-img1 {
-    width: 127.06px;
-  }
-
-  .train-img3 {
-    width: 267.44px;
-    right: -32.5px;
-    bottom: 0.1px;
-  }
-
-  .train-img2 {
-    width: 128.47px;
-    position: absolute;
-    right: -28.47px;
-    bottom: 0.1px;
   }
 
   /* About Gym Section */
@@ -2761,33 +2717,9 @@ MEDIA QUERIES
   }
 
   /* Training Section */
-  .slide {
-    height: 252.1px;
-  }
-
-  .smaller-yellow-line {
-    margin-left: 31px !important;
-  }
-
-  .card .title3 {
-    margin-left: 0px !important;
-  }
-
-  .train-img2 {
-    width: 160px !important;
-    right: 14px !important;
-    bottom: 0.1px;
-  }
-
-  .train-img1 {
-    width: 160px !important;
-    right: 14px !important;
-    bottom: 0.1px;
-  }
 
   .train-img3 {
-    width: 240px !important;
-    right: 15px !important;
+    max-width: 310px;
   }
 
   /* About Gym Section */
@@ -3007,6 +2939,12 @@ MEDIA QUERIES
 }
 
 @media screen and (max-width: 425px) {
+
+  /* Training Section */
+  .train-img3 {
+    max-width: 280px;
+  }
+
   /* About Gym Section */
   .about-left-hdr .title3 {
     font-size: 16px;
@@ -3042,6 +2980,15 @@ MEDIA QUERIES
   }
 
   /* Plan Section */
+
+  .plan-left-hdr .title3::before {
+    top: -14%;
+  }
+
+  .plan-title3 {
+    font-size: 14px !important;
+  }
+
   .price-ben > li {
     font-size: 14px;
   }

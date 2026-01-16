@@ -252,6 +252,10 @@ HEADER SECTION
   object-fit: contain;
 }
 
+.search-wrpr .form-control:focus {
+  box-shadow: none;
+}
+
 .search-input {
   background: none;
   border: none;
@@ -266,6 +270,7 @@ HEADER SECTION
   background: none;
   outline: none !important;
   border: none !important;
+  color: var(--text-color);
 }
 
 .cart-bg {
@@ -278,10 +283,15 @@ HEADER SECTION
   background-color: var(--primary-color);
 }
 
-.cart-bg:hover {
+.cart-bg:hover svg {
+  transform: scale(1.3);
 }
 
-.cart-bg > img {
+.cart-bg:hover svg {
+  transition: all 0.3s ease-in-out;
+}
+
+.cart-bg > svg {
   width: 24px;
   height: 24px;
 }
@@ -952,7 +962,7 @@ WORKOUT SECTION
 .cata-card-img > img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .img2 {
@@ -1236,7 +1246,7 @@ FOOTER SECTION
 }
 
 .footer-logo {
-  width: 650px;
+  max-width: 650px;
   margin-left: auto;
 }
 
@@ -1245,7 +1255,7 @@ FOOTER SECTION
   height: 100%;
 }
 
-.ooterr-logo > a > img {
+.footer-logo > a > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1318,6 +1328,7 @@ FOOTER SECTION
 .email-input:focus {
   border: none;
   outline: none;
+  color: var(--text-color);
 }
 
 .email-input::placeholder {
@@ -1473,6 +1484,12 @@ MEDIA QUERIES
     left: 40px;
   }
 
+  .workout-sec .card-top > .yellow-line {
+    position: absolute;
+    left: 453px;
+    top: 321px;
+  }
+
   /* Common Section */
   .common-hdr > .title2 {
     margin-block: 100px;
@@ -1562,6 +1579,12 @@ MEDIA QUERIES
     max-width: 246px;
     top: -56.3px;
     left: -2px;
+  }
+
+  .workout-sec .card-top > .yellow-line {
+    position: absolute;
+    left: 352px;
+    top: 321px;
   }
 
   /* Footer Section */
@@ -1698,6 +1721,12 @@ MEDIA QUERIES
     left: 104px;
   }
 
+  .workout-sec .card-top > .yellow-line {
+    position: absolute;
+    left: 605px;
+    top: 321px;
+  }
+
   /* Common Section */
   .common-sec {
     padding: 95px 0 40px;
@@ -1731,9 +1760,9 @@ MEDIA QUERIES
     font-size: 36px;
   }
 
-  .title3 {
+  /* .title3 {
     font-size: 14px;
-  }
+  } */
 
   /* Modal */
   .modal-desc {
@@ -1753,10 +1782,6 @@ MEDIA QUERIES
   /* Banner Section */
   .banner-sec {
     padding: 350px 0 60px;
-  }
-
-  .about-yellow-line {
-    margin-left: 14px !important;
   }
 
   /* Project section */
@@ -1780,6 +1805,15 @@ MEDIA QUERIES
   }
 
   /* Workout Section */
+
+  .workout-sec .about-hdr .about-title3 {
+    font-size: 23px !important;
+  }
+
+  .workout-sec .about-hdr .about-title3::before {
+    top: 0;
+  }
+
   .grid {
     margin-top: 90px;
   }
@@ -1846,10 +1880,20 @@ MEDIA QUERIES
     font-size: 11px;
   }
 
+  .workout-sec .card-top > .yellow-line {
+    position: absolute;
+    left: 426px;
+    top: 321px;
+  }
+
   /* Common Section */
   .common-hdr > .title2 {
     font-size: 36px;
     margin-block: 50px;
+  }
+
+  .common-hdr .title3 {
+    font-size: 23px;
   }
 
   .accordion-item {
@@ -2038,7 +2082,7 @@ MEDIA QUERIES
 
   .img7 {
     top: -30.07px;
-    right: 63px;
+    right: 29px;
     left: 0;
   }
 
@@ -2056,13 +2100,24 @@ MEDIA QUERIES
     font-size: 18px;
   }
 
+  .workout-sec .card-top > .yellow-line {
+    position: absolute;
+    left: 303px;
+    top: 321px;
+  }
+
   /* Common Section */
   .common-sec {
     padding: 70px 0 40px;
   }
 
-  .common-hdr > .title3 {
-    margin-left: 18px;
+  .common-hdr .about-title3 {
+    margin-left: 46px;
+    font-size: 19px !important;
+  }
+
+  .about-hdr .about-title3::before {
+    top: -9%;
   }
 
   .common-hdr > .title2 {
@@ -2128,6 +2183,40 @@ MEDIA QUERIES
 }
 
 @media screen and (max-width: 425px) {
+  /* Workout Section */
+  .workout-sec .card-top > .yellow-line {
+    position: absolute;
+    left: 195px;
+    top: 321px;
+  }
+
+  .workout-sec .about-hdr .about-title3 {
+    font-size: 16px !important;
+  }
+
+  .workout-sec .about-hdr .about-title3::before {
+    height: 20px;
+    width: 20px;
+  }
+
+  .about-yellow-line,
+  .about-yellow-line::after,
+  .about-yellow-line::before {
+    width: 8.55px;
+    height: 18px;
+  }
+
+  /* Common Section */
+  .common-hdr .about-title3 {
+    margin-left: 46px;
+    font-size: 14px !important;
+  }
+
+  .common-hdr .about-hdr .about-title3::before {
+    height: 18px;
+    width: 18px;
+  }
+
   /* Footer Section */
   .footer-links {
     padding-right: 10px;

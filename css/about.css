@@ -252,6 +252,10 @@ HEADER SECTION
   object-fit: contain;
 }
 
+.search-wrpr .form-control:focus {
+  box-shadow: none;
+}
+
 .search-input {
   background: none;
   border: none;
@@ -266,6 +270,7 @@ HEADER SECTION
   background: none;
   outline: none !important;
   border: none !important;
+  color: var(--text-color);
 }
 
 .cart-bg {
@@ -278,10 +283,15 @@ HEADER SECTION
   background-color: var(--primary-color);
 }
 
-.cart-bg:hover {
+.cart-bg:hover svg {
+  transform: scale(1.3);
 }
 
-.cart-bg > img {
+.cart-bg:hover svg {
+  transition: all 0.3s ease-in-out;
+}
+
+.cart-bg > svg {
   width: 24px;
   height: 24px;
 }
@@ -793,6 +803,7 @@ ABOUT SECTION
 
 .phone-img {
   max-width: 99.28px;
+  cursor: pointer;
 }
 
 .phone-img > img {
@@ -842,27 +853,29 @@ SERVICE SECTION
 }
 
 .about-swiper {
-  position: relative;
+  overflow: hidden;
+  max-width: 600px;
+  padding-bottom: 45px;
 }
 
-.about-swiper-slide {
+/* .about-swiper-slide {
   margin: 0 auto;
-}
+} */
 
 .training-card {
-  max-width: 855px;
+  /* max-width: 855px; */
   padding: 30px;
   background-color: var(--text-color-10);
   backdrop-filter: blur(44px) saturate(180%) brightness(1.2);
   -webkit-backdrop-filter: blur(44px) saturate(180%) brightness(1.2);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37),
     inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
-  position: relative;
-  margin: 0 auto;
+  /* position: relative;
+  margin: 0 auto; */
 }
 
 .training-hdr {
-  font-size: 42px;
+  font-size: 36px;
   font-weight: 900;
   font-family: "Akira";
   color: var(--text-color);
@@ -877,10 +890,8 @@ SERVICE SECTION
 }
 
 .about-pagination {
-  bottom: 40px;
-  left: 40px;
-  width: auto !important;
-  text-align: left;
+  bottom: 0 !important;
+  left: -41% !important;
 }
 
 .swiper-pagination-bullet-active {
@@ -983,10 +994,9 @@ WORKOUT SECTION
 }
 
 .filter-btn-cntn > .filter-wrapper {
-  display: flex;
   align-items: center;
   justify-content: center;
-  overflow-x: scroll;
+  /* overflow-x: scroll; */
 }
 
 .button-iso {
@@ -1013,10 +1023,10 @@ WORKOUT SECTION
   color: var(--tertiary-color) !important;
 }
 
-.button-iso:active > p {
+/* .button-iso:active > p {
   color: var(--tertiary-color);
   background-color: var(--primary-color) !important;
-}
+} */
 
 .btn-slideWidth {
   width: fit-content !important;
@@ -1410,7 +1420,9 @@ GET IN TOUCH SECTION
 #lname2 {
   width: 100%;
   height: 46px;
+  padding: 15px;
   border: none;
+  outline: none;
 }
 
 .text-area-hd {
@@ -1420,7 +1432,9 @@ GET IN TOUCH SECTION
 #text-area {
   width: 100%;
   height: 150px;
+  padding: 15px;
   border: none;
+  outline: none;
 }
 
 .form-btn {
@@ -1875,7 +1889,7 @@ FOOTER SECTION
 }
 
 .footer-logo {
-  width: 650px;
+  max-width: 650px;
   margin-left: auto;
 }
 
@@ -1884,7 +1898,7 @@ FOOTER SECTION
   height: 100%;
 }
 
-.ooterr-logo > a > img {
+.footer-logo > a > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1957,7 +1971,12 @@ FOOTER SECTION
 .email-input:focus {
   border: none;
   outline: none;
+  color: var(--text-color);
 }
+
+/* .email-input:focus::placeholder {
+  display: none;
+} */
 
 .email-input::placeholder {
   color: var(--text-color);
