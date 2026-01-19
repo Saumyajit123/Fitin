@@ -886,7 +886,7 @@ TRAINING SECTION
   max-width: 196px;
   position: absolute;
   right: 10px;
-  bottom: 35px;
+  bottom: 0;
   z-index: -1;
 }
 
@@ -899,8 +899,8 @@ TRAINING SECTION
 .train-img2 {
   max-width: 211px;
   position: absolute;
-  right: 0px;
-  bottom: 35px;
+  right: 0;
+  bottom: 0;
   z-index: -1;
 }
 
